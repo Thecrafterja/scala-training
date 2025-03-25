@@ -4,23 +4,14 @@ class Calculator {
   }
 
   def subtract(x: Int, y: Int): Int = {
-    return x - y
+    //TODO
   }
 
   def divide(x: Double, y: Double): Double = {
-    if y == 0 then
-        throw new IllegalArgumentException
-    else
-        return x / y
+    //TODO
   }
 
   def factorial(a: Int): Int = {
-    if a == 0 then return 1
-
-    var result = 1
-    for i <- (1 to a) do
-        result *= i
-
-    return result
+    //TODO
   }
 }

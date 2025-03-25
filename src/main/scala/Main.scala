@@ -1,5 +1,7 @@
 @main def hello(): Unit =
-  println("Hello world!")
-  println(msg)
+  println("Calculator starting...")
 
-def msg = "I was compiled by Scala 3. :)"
+  var calc = new Calculator()
+
+  println(s"5 - 3 = ${calc.subtract(5, 3)}")
+  println(s"4! = ${calc.factorial(4)}")

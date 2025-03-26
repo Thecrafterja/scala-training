@@ -23,4 +23,15 @@ class Calculator {
 
     return result
   }
+
+  def operate(f: (total: Double, current: Double) => Double, x: Double*): Double = {
+    if x.size < 2 then throw new IllegalArgumentException
+
+    var result = x(0)
+
+    for i <- (1 until x.size) do
+      result = f(result, x(i))
+
+    return result
+  }
 }

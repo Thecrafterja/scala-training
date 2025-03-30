@@ -24,9 +24,14 @@ class Calculator {
     return result
   }
 
-  def gcD(a: Int, b: Int): Int = {
-    if b == 0 then return a
+  def derive(polynom: List[PolynomPart]): List[PolynomPart] = {
+    var derived: List[PolynomPart] = List()
 
-    return gcD(b, a % b)
+    for p <- polynom do
+      if p.exponent != 0 then
+        var newPart = PolynomPart(p.exponent * p.factor, p.exponent - 1)
+        derived = derived :+ newPart
+
+    return derived
   }
 }

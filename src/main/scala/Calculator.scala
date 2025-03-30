@@ -23,4 +23,8 @@ class Calculator {
 
     return result
   }
+
+  def gcD(a: Int, b: Int): Int = {
+    
+  }
 }

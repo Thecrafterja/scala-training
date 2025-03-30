@@ -25,13 +25,6 @@ class Calculator {
   }
 
   def derive(polynom: List[PolynomPart]): List[PolynomPart] = {
-    var derived: List[PolynomPart] = List()
-
-    for p <- polynom do
-      if p.exponent != 0 then
-        var newPart = PolynomPart(p.exponent * p.factor, p.exponent - 1)
-        derived = derived :+ newPart
-
-    return derived
+    
   }
 }

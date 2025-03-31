@@ -25,6 +25,6 @@ class Calculator {
   }
 
   def derive(polynom: List[PolynomPart]): List[PolynomPart] = {
-    
+    // TODO
   }
 }

@@ -45,3 +45,15 @@ class CalculatorTest extends AnyFunSuite with BeforeAndAfterEach:
     test("Calculator.factorial - 1") {
         assert(calc.factorial(1) == 1)
     }
+
+    test("Calculator.derive") {
+        val p = List[PolynomPart](new PolynomPart(-2, 2), new PolynomPart(1, 1), new PolynomPart(10, 0))
+
+        assert(new Calculator().derive(p).toPolynomString() == "-4 * (x^1) + 1")
+    }
+
+    test("Calculator.derive - empty return") {
+        val p = List[PolynomPart](new PolynomPart(10, 0))
+
+        assert(new Calculator().derive(p).toPolynomString() == "")
+    }

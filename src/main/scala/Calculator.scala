@@ -17,11 +17,13 @@ class Calculator {
   def factorial(a: Int): Int = {
     if a == 0 then return 1
 
-    var result = 1
+    (1 to a).reduce(_ * _)
+
+    /* var result = 1
     for i <- (1 to a) do
         result *= i
 
-    return result
+    return result */
   }
 
   def derive(polynom: List[PolynomPart]): List[PolynomPart] = {
